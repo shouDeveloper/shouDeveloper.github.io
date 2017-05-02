@@ -565,7 +565,7 @@ Content
 .home .entry-content {
   margin: 1.5em 0; }
   .home .entry-content p {
-    text-align: center; }
+    text-indent: 2em; }
 
 .posted-on {
   text-align: center;
@@ -581,8 +581,21 @@ Content
   font-style: normal;
   margin-bottom: 30px; }
   .tags-links a {
-    margin: 0 5px;
-    font-style: italic; }
+    margin: 0 5px; }
+
+.posted-links {
+  display: flex;
+  justify-content: center; }
+  .posted-links .posted-on {
+    display: flex;
+    margin-right: 10px; }
+  .posted-links .tags-links {
+    display: flex;
+    margin-left: 10px;
+    align-items: center;
+    margin-bottom: 0; }
+    .posted-links .tags-links a:hover {
+      color: #66cccc; }
 
 .pager {
   padding: 1.5em 0; }
@@ -708,6 +721,15 @@ Footer
     text-decoration: none;
     color: #666666; }
 
+.cover-click {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #7e7e7e;
+  opacity: .5;
+  z-index: 20;
+  display: none; }
+
 .site-header {
   width: 100%;
   background: #66cccc;
@@ -809,6 +831,11 @@ Footer
     bottom: 64px;
     right: 50px;
     z-index: 29; }
+  .post .post-pic-container {
+    display: flex;
+    align-items: center;
+    height: 300px;
+    overflow: hidden; }
 
 .entry-content {
   font-family: -apple-system, BlinkMacSystemFont,"Helvetica Neue","PingFang-SC-Regular","STHeiti", "Helvetica","Arial","Verdana","sans-serif","Microsoft YaHei";
@@ -1042,20 +1069,22 @@ pre {
 
 @media screen and (max-width: 767px) {
   .logo a img {
-    height: 36px; }
+    height: 30px;
+    margin-top: 10px; }
   .site-content {
     min-height: auto; }
     .site-content .content-area {
       padding-top: 0; }
   .site-header {
     background: #66cccc;
-    position: relative; }
+    position: relative;
+    height: 50px; }
     .site-header .navbar {
       display: none;
       float: none;
       position: absolute;
       left: 0;
-      top: 70px;
+      top: 50px;
       padding: 15px 0 15px 30px;
       width: 100%;
       background: #fff;
@@ -1072,7 +1101,8 @@ pre {
           .site-header .navbar ul li a:visited {
             color: #66cccc; }
     .site-header .button-wrap {
-      display: block; }
+      display: block;
+      padding-top: 16px; }
   .post .nav-links {
     display: none; }
   .footer-widgets .row .col-1-1,
