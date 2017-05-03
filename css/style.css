@@ -595,7 +595,8 @@ Content
   max-width: 600px;
   margin: 0 auto;
   padding-left: 50px;
-  padding-right: 50px; }
+  padding-right: 50px;
+  margin-top: 70px; }
 
 .inside-wrapper {
   max-width: 920px;
@@ -1208,7 +1209,8 @@ pre {
 @media screen and (max-width: 320px) {
   .container {
     padding-left: 20px;
-    padding-right: 20px; }
+    padding-right: 20px;
+    margin-top: 0; }
   .site-header,
   .page .site-header,
   .home.paged .site-header {
