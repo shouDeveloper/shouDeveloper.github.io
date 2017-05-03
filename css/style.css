@@ -1186,7 +1186,8 @@ pre {
         .site-header .navbar ul li::before {
           display: none; }
         .site-header .navbar ul li a {
-          color: #66cccc; }
+          color: #66cccc;
+          font-weight: 300; }
           .site-header .navbar ul li a:visited {
             color: #66cccc; }
     .site-header .button-wrap {
