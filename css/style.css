@@ -504,11 +504,80 @@ Common
 /*--------------------------------------------------------------
 Content
 --------------------------------------------------------------*/
+.custome-index {
+  width: 100%;
+  padding-top: 70px;
+  text-align: center;
+  height: 100%;
+  height: 100vh; }
+  .custome-index .top {
+    background-color: #66cccc;
+    height: 500px; }
+    .custome-index .top .title {
+      font-size: 30px;
+      font-weight: 300;
+      color: #fff;
+      height: 50px;
+      line-height: 50px; }
+    .custome-index .top canvas {
+      width: 990px;
+      margin-top: 150px;
+      bottom: 0; }
+  .custome-index .bottom {
+    width: 990px;
+    margin: 0 auto;
+    padding-top: 70px; }
+    .custome-index .bottom .item {
+      float: left;
+      width: 330px;
+      text-align: center; }
+      .custome-index .bottom .item i {
+        font-size: 60px;
+        color: #66cccc;
+        cursor: default; }
+      .custome-index .bottom .item a {
+        margin: 20px auto 0 auto;
+        display: block;
+        width: 120px;
+        font-weight: 200;
+        height: 36px;
+        text-align: center;
+        line-height: 36px;
+        color: #66cccc;
+        border: 1px solid #66cccc;
+        border-radius: 18px;
+        transition: all 0.5s; }
+        .custome-index .bottom .item a:hover {
+          background: #66cccc;
+          color: #fff; }
+      .custome-index .bottom .item p {
+        width: 100%;
+        margin-top: 20px;
+        padding: 0 60px;
+        text-align: left;
+        text-indent: 2em;
+        font-size: 15px;
+        color: #000;
+        box-sizing: border-box; }
+
 .site-content {
   min-height: calc(100% - 274px); }
+  .site-content .post-title {
+    text-align: center;
+    margin-top: 30px;
+    height: 80px;
+    background: #66cccc;
+    font-size: 25px;
+    color: #fff;
+    line-height: 80px;
+    font-weight: 100;
+    transition: all 0.5s; }
+    .site-content .post-title:hover {
+      color: #66cccc;
+      background-color: #fff; }
 
 .content-area {
-  padding-top: 70px; }
+  min-height: 66vh; }
 
 .error404 .content-area,
 .page .content-area {
@@ -725,7 +794,7 @@ Footer
   position: fixed;
   width: 100%;
   height: 100%;
-  background: #7e7e7e;
+  background: #e7e7e7;
   opacity: .5;
   z-index: 20;
   display: none; }
@@ -733,7 +802,6 @@ Footer
 .site-header {
   width: 100%;
   background: #66cccc;
-  border-bottom: 1px solid #dcdcdc;
   z-index: 30;
   position: fixed;
   top: 0;
@@ -788,7 +856,8 @@ Footer
     .navbar ul li a {
       text-decoration: none;
       line-height: 1.5;
-      color: #fff; }
+      color: #fff;
+      font-weight: 100; }
       .navbar ul li a:hover {
         opacity: 1; }
       .navbar ul li a:visited {
@@ -801,7 +870,7 @@ Footer
   content: "";
   width: 0%;
   height: 1px;
-  background: #7e7e7e;
+  background: #fff;
   display: block;
   -webkit-transition: width 0.25s ease;
   transition: width 0.25s ease; }
@@ -810,8 +879,8 @@ Footer
   width: 100%; }
 
 .post {
-  padding-top: 70px;
-  padding-bottom: 70px; }
+  padding-top: 30px;
+  padding-bottom: 30px; }
   .post .nav-links a {
     text-decoration: none;
     color: #3a3a3a;
@@ -1075,6 +1144,26 @@ pre {
     min-height: auto; }
     .site-content .content-area {
       padding-top: 0; }
+  .custome-index {
+    width: 100%;
+    padding-top: 0;
+    height: initial; }
+    .custome-index .top {
+      height: 400px; }
+      .custome-index .top .title {
+        font-size: 20px;
+        padding-top: 30px; }
+      .custome-index .top canvas {
+        margin-top: 120px;
+        width: 445px;
+        height: 165px; }
+    .custome-index .bottom {
+      overflow: auto;
+      width: 100%;
+      margin: initial; }
+      .custome-index .bottom .item {
+        width: 100%;
+        margin-bottom: 20px; }
   .site-header {
     background: #66cccc;
     position: relative;
