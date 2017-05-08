@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<!-- Head tag -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!--Description-->
+  
+  <meta name="description" content="上海海洋大学开发者联盟">
+  
+
+  <!--Author-->
+  
+  <meta name="author" content="shou-devloper">
+  
+
+  <!--Open Graph Title-->
+  
+      <meta property="og:title" content="知乎日报本地api转发"/>
+  
+  <!--Open Graph Description-->
+  
+      <meta property="og:description" content="上海海洋大学开发者联盟" />
+  
+  <!--Open Graph Site Name-->
+  <meta property="og:site_name" content="SHOU-DEVELOPER"/>
+  <!--Type page-->
+  
+      <meta property="og:type" content="article" />
+  
+  <!--Page Cover-->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- Title -->
+  
+  <title>知乎日报本地api转发 - SHOU-DEVELOPER</title>
+
+
+  <link rel="shortcut icon" href="http://oj7lzlt0w.bkt.clouddn.com/shouDevfavicon.ico">
+
+  <!-- Custom CSS/Sass -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!----------------------------
+  https://github.com/GallenHu/hexo-theme-Daily
+
+ _____            _   _
+|  __ \          (_) | |
+| |  | |   __ _   _  | |  _   _
+| |  | |  / _` | | | | | | | | |
+| |__| | | (_| | | | | | | |_| |
+|_____/   \__,_| |_| |_|  \__, |
+                          __/ |
+                         |___/
+
+    --------------------------->
+
+</head>
+
+
+<body>
+
+  <!-- Nav -->
+  <div class="cover-click"></div>
+<header class="site-header">
+  <div class="header-inside">
+    <div class="logo">
+      <a href="/" rel="home">
+        
+        <img src="http://oj7lzlt0w.bkt.clouddn.com/shouDevlogo2.svg" alt="SHOU-DEVELOPER" height="60">
+        
+      </a>
+    </div>
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse">
+        <ul class="navbar-nav">
+          
+          
+            <li>
+              <a href="/.">
+                
+                  首页
+                
+              </a>
+            </li>
+          
+            <li>
+              <a href="/archives">
+                
+                  所有文章
+                
+              </a>
+            </li>
+          
+            <li>
+              <a href="/about/">
+                
+                  关于
+                
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </nav>
+    <div class="button-wrap">
+      <button class="menu-toggle">Primary Menu</button>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main Content -->
+  <div class="content-area">
+  <div class="post">
+    <!-- Post Content -->
+    <div class="container">
+      <article>
+        <!-- Title date & tags -->
+        <div class="post-header">
+          <h1 class="entry-title">
+            知乎日报本地api转发
+            
+          </h1>
+          <p class="posted-on">
+          2017-05-08
+          </p>
+          <div class="tags-links">
+            
+              
+                <a href="/tags/api/" rel="tag">
+                  api
+                </a>
+              
+            
+          </div>
+        </div>
+        <!-- Post Main Content -->
+        <div class="entry-content">
+          <h2 id="接口说明"><a href="#接口说明" class="headerlink" title="接口说明"></a>接口说明</h2><p>由ZhihuDailyPurify整理的<a href="https://github.com/izzyleung/ZhihuDailyPurify/wiki/%E7%9F%A5%E4%B9%8E%E6%97%A5%E6%8A%A5-API-%E5%88%86%E6%9E%90" target="_blank" rel="external">文档</a></p>
+<h2 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h2><p><a href="https://github.com/shouDeveloper/zhihu-daily-api" target="_blank" rel="external">源码</a></p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="启动服务器"><a href="#启动服务器" class="headerlink" title="启动服务器"></a>启动服务器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/shouDeveloper/zhihu-daily-api.git</div><div class="line">cd zhihu-daily-api</div><div class="line">npm run start</div></pre></td></tr></table></figure>
+<h3 id="客户端使用"><a href="#客户端使用" class="headerlink" title="客户端使用"></a>客户端使用</h3><p>只要把上述文档中的host更改为本地的host即可<br>例如 <code>http://news-at.zhihu.com/api/4/news/latest</code>则转为<code>http://localhost:9999/api/4/news/latest</code><br>对于<code>图片</code>，也是吧其host改成本地host即可。</p>
+<h2 id="API文档"><a href="#API文档" class="headerlink" title="API文档"></a>API文档</h2><h3 id="1-启动界面图像获取"><a href="#1-启动界面图像获取" class="headerlink" title="1. 启动界面图像获取"></a>1. 启动界面图像获取</h3><ul>
+<li>URL: <code>/api/7/prefetch-launch-images/1080*1920</code>  </li>
+<li><p><code>prefetch-launch-images</code> 后为图像分辨率，接受任意的 <code>number*number</code> 格式， <code>number</code> 为任意非负整数，返回值均相同。  </p>
+</li>
+<li><p>响应实例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    &quot;creatives&quot;: [</div><div class="line">        &#123;</div><div class="line">            &quot;url&quot;: &quot;https://pic3.zhimg.com/v2-5af460972557190bd4306ad66f360d4a.jpg&quot;,</div><div class="line">            &quot;start_time&quot;: 1491927091,</div><div class="line">            &quot;impression_tracks&quot;: [</div><div class="line">                &quot;https://sugar.zhihu.com/track?vs=1&amp;ai=3838&amp;ut=&amp;cg=2&amp;ts=1491927091.68&amp;si=52848dcc42b046bbb2d7a40921268157&amp;lu=0&amp;hn=ad-engine.ad-engine.7fab952b&amp;at=impression&amp;pf=PC&amp;az=11&amp;sg=4590d6230fc8f471ada5f10e6f27be94&quot;</div><div class="line">            ],</div><div class="line">            &quot;type&quot;: 0,</div><div class="line">            &quot;id&quot;: &quot;3838&quot;</div><div class="line">        &#125;</div><div class="line">    ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>分析：</p>
+<ul>
+<li><code>url</code> : 图像的 URL</li>
+<li><code>start_time</code> : 获取的时间(ms)</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-软件版本查询"><a href="#2-软件版本查询" class="headerlink" title="2. 软件版本查询"></a>2. 软件版本查询</h3><ul>
+<li>Android: <code>/api/4/version/android/2.3.0</code></li>
+<li>iOS: <code>/api/4/version/ios/2.3.0</code></li>
+<li>URL 最后部分的数字代表所安装『知乎日报』的版本</li>
+<li><p>响应实例：  </p>
+<p>  软件为最新版本时</p>
+<pre><code>{
+    &quot;status&quot;: 0,
+    &quot;latest&quot;: &quot;2.2.0&quot;
+}
+</code></pre><p>  软件为较老版本时</p>
+<pre><code>{
+    &quot;status&quot;: 1,
+    &quot;msg&quot;: &quot;【更新内容】（后略）&quot;,
+    &quot;latest&quot;: &quot;2.2.0&quot;
+}
+</code></pre></li>
+<li><p>分析：</p>
+<ul>
+<li><code>status</code> : 0 代表软件为最新版本，1 代表软件需要升级</li>
+<li><code>latest</code> : 软件最新版本的版本号（数字的第二段会比最新的版本号低 1）</li>
+<li><code>msg</code> : 仅出现在软件需要升级的情形下，提示用户升级软件的对话框中显示的消息</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-最新消息"><a href="#3-最新消息" class="headerlink" title="3. 最新消息"></a>3. 最新消息</h3><ul>
+<li>URL: <code>/api/4/news/latest</code>  </li>
+<li><p>响应实例：</p>
+<pre><code>{
+    date: &quot;20140523&quot;,
+    stories: [
+        {
+            title: &quot;中国古代家具发展到今天有两个高峰，一个两宋一个明末（多图）&quot;,
+            ga_prefix: &quot;052321&quot;,
+            images: [
+                &quot;http://p1.zhimg.com/45/b9/45b9f057fc1957ed2c946814342c0f02.jpg&quot;
+            ],
+            type: 0,
+            id: 3930445
+        },
+    ...
+    ],
+    top_stories: [
+        {
+            title: &quot;商场和很多人家里，竹制家具越来越多（多图）&quot;,
+            image: &quot;http://p2.zhimg.com/9a/15/9a1570bb9e5fa53ae9fb9269a56ee019.jpg&quot;,
+            ga_prefix: &quot;052315&quot;,
+            type: 0,
+            id: 3930883
+        },
+    ...
+    ]
+}
+</code></pre></li>
+<li><p>分析：</p>
+<ul>
+<li><code>date</code> : 日期</li>
+<li><code>stories</code> : 当日新闻<ul>
+<li><code>title</code> : 新闻标题</li>
+<li><code>images</code> : 图像地址（官方 API 使用数组形式。目前暂未有使用多张图片的情形出现，<strong>曾见无</strong> <code>images</code> <strong>属性的情况</strong>，请在使用中注意 ）</li>
+<li><code>ga_prefix</code> : 供 Google Analytics 使用</li>
+<li><code>type</code> : 作用未知</li>
+<li><code>id</code> : <code>url</code> 与 <code>share_url</code> 中最后的数字（应为内容的 id）</li>
+<li><code>multipic</code> : 消息是否包含多张图片（仅出现在包含多图的新闻中）</li>
+</ul>
+</li>
+<li><code>top_stories</code> : 界面顶部 ViewPager 滚动显示的显示内容（子项格式同上）（请注意区分此处的 <code>image</code> 属性与 <code>stories</code> 中的 <code>images</code> 属性）</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-消息内容获取与离线下载"><a href="#4-消息内容获取与离线下载" class="headerlink" title="4. 消息内容获取与离线下载"></a>4. 消息内容获取与离线下载</h3><ul>
+<li>URL: <code>/api/4/news/3892357</code>  </li>
+<li>使用在 <code>最新消息</code> 中获得的 <code>id</code>，拼接在 <code>/api/4/news/</code> 后，得到对应消息 JSON 格式的内容</li>
+<li><p>响应实例：</p>
+<pre><code>{
+    body: &quot;&lt;div class=&quot;main-wrap content-wrap&quot;&gt;...&lt;/div&gt;&quot;,
+    image_source: &quot;Yestone.com 版权图片库&quot;,
+    title: &quot;深夜惊奇 · 朋友圈错觉&quot;,
+    image: &quot;http://pic3.zhimg.com/2d41a1d1ebf37fb699795e78db76b5c2.jpg&quot;,
+    share_url: &quot;http://daily.zhihu.com/story/4772126&quot;,
+    js: [ ],
+    recommenders&quot;: [
+        { &quot;avatar&quot;: &quot;http://pic2.zhimg.com/fcb7039c1_m.jpg&quot; },
+        { &quot;avatar&quot;: &quot;http://pic1.zhimg.com/29191527c_m.jpg&quot; },
+        { &quot;avatar&quot;: &quot;http://pic4.zhimg.com/e6637a38d22475432c76e6c9e46336fb_m.jpg&quot; },
+        { &quot;avatar&quot;: &quot;http://pic1.zhimg.com/bd751e76463e94aa10c7ed2529738314_m.jpg&quot; },
+        { &quot;avatar&quot;: &quot;http://pic1.zhimg.com/4766e0648_m.jpg&quot; }
+    ],
+    ga_prefix: &quot;050615&quot;,
+    section&quot;: {
+        &quot;thumbnail&quot;: &quot;http://pic4.zhimg.com/6a1ddebda9e8899811c4c169b92c35b3.jpg&quot;,
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;深夜惊奇&quot;
+    },
+    type: 0,
+    id: 4772126,
+    css: [
+        &quot;http://news.at.zhihu.com/css/news_qa.auto.css?v=1edab&quot;
+    ]
+}
+</code></pre></li>
+<li><p>分析：</p>
+<ul>
+<li><code>body</code> : HTML 格式的新闻</li>
+<li><code>image-source</code> : 图片的内容提供方。为了避免被起诉非法使用图片，在显示图片时最好附上其版权信息。</li>
+<li><code>title</code> : 新闻标题</li>
+<li><code>image</code> : 获得的图片同 <code>最新消息</code> 获得的图片分辨率不同。这里获得的是在文章浏览界面中使用的大图。</li>
+<li><code>share_url</code> : 供在线查看内容与分享至 SNS 用的 URL</li>
+<li><code>js</code> : 供手机端的 WebView(UIWebView) 使用</li>
+<li><code>recommenders</code> : 这篇文章的推荐者</li>
+<li><code>ga_prefix</code> : 供 Google Analytics 使用</li>
+<li><code>section</code> : 栏目的信息<ul>
+<li><code>thumbnail</code> : 栏目的缩略图</li>
+<li><code>id</code> : 该栏目的 <code>id</code></li>
+<li><code>name</code> : 该栏目的名称</li>
+</ul>
+</li>
+<li><code>type</code> : 新闻的类型</li>
+<li><code>id</code> : 新闻的 id</li>
+<li><code>css</code> : 供手机端的 WebView(UIWebView) 使用<ul>
+<li>可知，知乎日报的文章浏览界面利用 WebView(UIWebView) 实现</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>特别注意</strong><br>  在较为特殊的情况下，知乎日报可能将某个主题日报的站外文章推送至知乎日报首页。<br>  响应实例：</p>
+<pre><code>{
+    &quot;theme_name&quot;: &quot;电影日报&quot;,
+    &quot;title&quot;: &quot;五分钟读懂明星的花样昵称：一美、法鲨……&quot;,
+    &quot;share_url&quot;: &quot;http://daily.zhihu.com/story/3942319&quot;,
+    &quot;js&quot;: [],
+    &quot;ga_prefix&quot;: &quot;052921&quot;,
+    &quot;editor_name&quot;: &quot;邹波&quot;,
+    &quot;theme_id&quot;: 3,
+    &quot;type&quot;: 1,
+    &quot;id&quot;: 3942319,
+    &quot;css&quot;: [
+        &quot;http://news.at.zhihu.com/css/news_qa.6.css?v=b390f&quot;
+    ]
+}
+</code></pre><p>  此时返回的 JSON 数据缺少 <code>body</code>，<code>image-source</code>，<code>image</code>，<code>js</code> 属性。多出 <code>theme_name</code>，<code>editor_name</code>，<code>theme_id</code> 三个属性。<code>type</code> 由 <code>0</code> 变为 <code>1</code>。</p>
+</li>
+</ul>
+<h3 id="5-过往消息"><a href="#5-过往消息" class="headerlink" title="5. 过往消息"></a>5. 过往消息</h3><ul>
+<li>URL: <code>/api/4/news/before/20131119</code>  </li>
+<li><strong>若果需要查询 11 月 18 日的消息，</strong><code>before</code> <strong>后的数字应为</strong> <code>20131119</code>  </li>
+<li><strong>知乎日报的生日为 2013 年 5 月 19 日，若</strong> <code>before</code> <strong>后数字小于</strong> <code>20130520</code> <strong>，只会接收到空消息</strong>  </li>
+<li>输入的今日之后的日期仍然获得今日内容，但是格式不同于最新消息的 JSON 格式  </li>
+<li><p>响应实例：</p>
+<pre><code>{
+    date: &quot;20131118&quot;,
+    stories: [
+        {
+            title: &quot;深夜食堂 · 我的张曼妮&quot;,
+            ga_prefix: &quot;111822&quot;,
+            images: [
+                &quot;http://p4.zhimg.com/7b/c8/7bc8ef5947b069513c51e4b9521b5c82.jpg&quot;
+            ],
+            type: 0,
+            id: 1747159
+        },
+    ...
+    ]
+}
+</code></pre></li>
+<li><p>格式与前同，恕不再赘述</p>
+</li>
+</ul>
+<h3 id="6-新闻额外信息"><a href="#6-新闻额外信息" class="headerlink" title="6. 新闻额外信息"></a>6. 新闻额外信息</h3><ul>
+<li>URL: <code>/api/4/story-extra/#{id}</code>  </li>
+<li>输入新闻的ID，获取对应新闻的额外信息，如评论数量，所获的『赞』的数量。</li>
+<li><p>响应实例：</p>
+<pre><code>{
+    &quot;long_comments&quot;: 0,
+    &quot;popularity&quot;: 161,
+    &quot;short_comments&quot;: 19,
+    &quot;comments&quot;: 19,
+}
+</code></pre></li>
+<li><p>分析：</p>
+<ul>
+<li><code>long_comments</code> : 长评论总数</li>
+<li><code>popularity</code> : 点赞总数</li>
+<li><code>short_comments</code> : 短评论总数</li>
+<li><code>comments</code> : 评论总数</li>
+</ul>
+</li>
+</ul>
+<h3 id="7-新闻对应长评论查看"><a href="#7-新闻对应长评论查看" class="headerlink" title="7. 新闻对应长评论查看"></a>7. 新闻对应长评论查看</h3><ul>
+<li>URL: <code>/api/4/story/8997528/long-comments</code></li>
+<li>使用在 <code>最新消息</code> 中获得的 <code>id</code>，在 <code>/api/4/story/#{id}/long-comments</code> 中将 <code>id</code> 替换为对应的 <code>id</code>，得到长评论 JSON 格式的内容</li>
+<li><p>响应实例：</p>
+<pre><code>{
+    &quot;comments&quot;: [
+        {
+             &quot;author&quot;:&quot;巨型黑娃儿&quot;,
+             &quot;content&quot;:&quot;也不算逻辑问题。其实小时候刚刚听说这个玩意的时候我也奇...&quot;,
+             &quot;avatar&quot;:&quot;http://pic3.zhimg.com/4131a3385c748c9e2d02ab80e29a0c52_im.jpg&quot;,
+             &quot;time&quot;:1479706360,
+             &quot;reply_to&quot;:{
+                         &quot;content&quot;:&quot;第二个机灵抖的还是有逻辑问题，不该说忘了，应该说没喝过啊我也不知道&quot;,
+                         &quot;status&quot;:0,
+                         &quot;id&quot;:27275308,
+                         &quot;author&quot;:&quot;2233155495&quot;
+                         },
+             &quot;id&quot;:27276057,
+             &quot;likes&quot;:2
+        },
+        ...
+    ]
+}
+</code></pre></li>
+<li><p>分析：</p>
+<ul>
+<li><code>comments</code> : 长评论列表，形式为数组（请注意，其长度可能为 0）<ul>
+<li><code>author</code> : 评论作者</li>
+<li><code>content</code> : 评论的内容</li>
+<li><code>avatar</code> : 用户头像图片的地址</li>
+<li><code>id</code> : 评论者的唯一标识符</li>
+<li><code>likes</code> : 评论所获『赞』的数量</li>
+<li><code>time</code> : 评论时间</li>
+<li><code>reply_to</code> : 所回复的消息<ul>
+<li><code>content</code> : 原消息的内容</li>
+<li><code>status</code> : 消息状态，0为正常，非0为已被删除</li>
+<li><code>id</code> : 被回复者的唯一标识符</li>
+<li><code>author</code> : 被回复者</li>
+<li><code>err_msg</code>: 错误消息，仅当<code>status</code>非0时出现</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="8-新闻对应短评论查看"><a href="#8-新闻对应短评论查看" class="headerlink" title="8. 新闻对应短评论查看"></a>8. 新闻对应短评论查看</h3><ul>
+<li>URL: <code>/api/4/story/4232852/short-comments</code></li>
+<li>使用在 <code>最新消息</code> 中获得的 <code>id</code>，在 <code>/api/4/story/#{id}/short-comments</code> 中将 <code>id</code> 替换为对应的 <code>id</code>，得到短评论 JSON 格式的内容</li>
+<li><p>响应实例：</p>
+<pre><code>{
+    &quot;comments&quot;: [
+        {
+            &quot;author&quot;: &quot;Xiaole说&quot;,
+            &quot;id&quot;: 545721,
+            &quot;content&quot;: &quot;就吃了个花生米，呵呵&quot;,
+            &quot;likes&quot;: 0,
+            &quot;time&quot;: 1413600071,
+            &quot;avatar&quot;: &quot;http://pic1.zhimg.com/c41f035ab_im.jpg&quot;
+        },
+        ...
+    ]
+}
+</code></pre></li>
+<li><p>格式与前同，恕不再赘述</p>
+</li>
+</ul>
+<h3 id="9-主题日报列表查看"><a href="#9-主题日报列表查看" class="headerlink" title="9. 主题日报列表查看"></a>9. 主题日报列表查看</h3><ul>
+<li>URL: <code>/api/4/themes</code></li>
+<li><p>响应实例：</p>
+<pre><code>{
+    &quot;limit&quot;: 1000,
+    &quot;subscribed&quot;: [ ],
+    &quot;others&quot;: [
+        {
+            &quot;color&quot;: 8307764,
+            &quot;thumbnail&quot;: &quot;http://pic4.zhimg.com/2c38a96e84b5cc8331a901920a87ea71.jpg&quot;,
+            &quot;description&quot;: &quot;内容由知乎用户推荐，海纳主题百万，趣味上天入地&quot;,
+            &quot;id&quot;: 12,
+            &quot;name&quot;: &quot;用户推荐日报&quot;
+        },
+        ...
+    ]
+}
+</code></pre><ul>
+<li>分析：<ul>
+<li><code>limit</code> : 返回数目之限制（仅为猜测）</li>
+<li><code>subscribed</code> : 已订阅条目</li>
+<li><code>others</code> : 其他条目<ul>
+<li><code>color</code> : 颜色，作用未知</li>
+<li><code>thumbnail</code> : 供显示的图片地址</li>
+<li><code>description</code> : 主题日报的介绍</li>
+<li><code>id</code> : 该主题日报的编号</li>
+<li><code>name</code> : 供显示的主题日报名称</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="10-主题日报内容查看"><a href="#10-主题日报内容查看" class="headerlink" title="10. 主题日报内容查看"></a>10. 主题日报内容查看</h3><ul>
+<li>URL: <code>/api/4/theme/11</code></li>
+<li>使用在 <code>主题日报列表查看</code> 中获得需要查看的主题日报的 <code>id</code>，拼接在 <code>/api/4/theme/</code> 后，得到对应主题日报 JSON 格式的内容</li>
+<li><p>响应实例：</p>
+<pre><code>{
+    stories: [
+        {
+            images: [
+                &quot;http://pic1.zhimg.com/84dadf360399e0de406c133153fc4ab8_t.jpg&quot;
+            ],
+            type: 0,
+            id: 4239728,
+            title: &quot;前苏联监狱纹身百科图鉴&quot;
+        },
+        ...
+    ],
+    description: &quot;为你发现最有趣的新鲜事，建议在 WiFi 下查看&quot;,
+    background: &quot;http://pic1.zhimg.com/a5128188ed788005ad50840a42079c41.jpg&quot;,
+    color: 8307764,
+    name: &quot;不许无聊&quot;,
+    image: &quot;http://pic3.zhimg.com/da1fcaf6a02d1223d130d5b106e828b9.jpg&quot;,
+    editors: [
+        {
+            url: &quot;http://www.zhihu.com/people/wezeit&quot;,
+            bio: &quot;微在 Wezeit 主编&quot;,
+            id: 70,
+            avatar: &quot;http://pic4.zhimg.com/068311926_m.jpg&quot;,
+            name: &quot;益康糯米&quot;
+        },
+        ...
+    ],
+    image_source: &quot;&quot;
+}
+</code></pre><ul>
+<li>分析：<ul>
+<li><code>stories</code> : 该主题日报中的文章列表<ul>
+<li><code>images</code> : 图像地址（其类型为数组。请留意在代码中处理无该属性与数组长度为 0 的情况）</li>
+<li><code>type</code> : 类型，作用未知</li>
+<li><code>title</code> : 消息的标题</li>
+</ul>
+</li>
+<li><code>description</code> : 该主题日报的介绍</li>
+<li><code>background</code> : 该主题日报的背景图片（大图）</li>
+<li><code>color</code> : 颜色，作用未知</li>
+<li><code>name</code> : 该主题日报的名称</li>
+<li><code>image</code> : 背景图片的小图版本</li>
+<li><code>editors</code> : 该主题日报的编辑（『用户推荐日报』中此项的指是一个空数组，在 App 中的主编栏显示为『许多人』，点击后访问该主题日报的介绍页面，请留意）<ul>
+<li><code>url</code> : 主编的知乎用户主页</li>
+<li><code>bio</code> : 主编的个人简介</li>
+<li><code>id</code> : 数据库中的唯一表示符</li>
+<li><code>avatar</code> : 主编的头像</li>
+<li><code>name</code> : 主编的姓名</li>
+</ul>
+</li>
+<li><code>image_source</code> : 图像的版权信息</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="11-热门消息"><a href="#11-热门消息" class="headerlink" title="11. 热门消息"></a>11. 热门消息</h3><ul>
+<li><strong>请注意！</strong> 此 API 仍可访问，但是其内容未出现在最新的『知乎日报』 App 中。</li>
+<li>URL: <code>/api/3/news/hot</code>  </li>
+<li><p>响应实例：</p>
+<pre><code>{
+    recent: [
+        {
+            news_id: 3748552,
+            url: &quot;http://daily.zhihu.com/api/2/news/3748552&quot;,
+            thumbnail: &quot;http://p3.zhimg.com/67/6a/676a8337efec71a100eea6130482091b.jpg&quot;,
+            title: &quot;长得漂亮能力出众性格单纯的姑娘为什么会没有男朋友？&quot;
+        },
+    ...
+    ]
+}
+</code></pre></li>
+<li><p>大体同前面介绍的 API 类似，唯一需要注意的是：欲获得图片地址，不再使用 <code>image</code> 而是 <code>thumbnail</code> 属性</p>
+</li>
+<li><code>url</code> 属性可直接使用。请注意，<code>url</code> 中的 <code>api</code> 属性为 <strong>2</strong>，是较老版本。</li>
+</ul>
+<h3 id="12-软件推广"><a href="#12-软件推广" class="headerlink" title="12. 软件推广"></a>12. 软件推广</h3><ul>
+<li><strong>请注意！</strong> 此 API 已无法访问，但是其内容曾出现于『知乎日报』 App 中。</li>
+<li>Android: <code>/api/3/promotion/android</code>  </li>
+<li>iOS: <code>/api/3/promotion/ios</code></li>
+</ul>
+<h3 id="13-栏目总览"><a href="#13-栏目总览" class="headerlink" title="13. 栏目总览"></a>13. 栏目总览</h3><ul>
+<li><strong>请注意！</strong> 此 API 仍可访问，但是其内容未出现在最新的『知乎日报』 App 中。</li>
+<li>URL: <code>/api/3/sections</code>  </li>
+<li><p>响应实例：</p>
+<pre><code>{
+    data: [
+        {
+            id: 1,
+            thumbnail: &quot;http://p2.zhimg.com/10/b8/10b8193dd6a3404d31b2c50e1e232c87.jpg&quot;,
+            name: &quot;深夜食堂&quot;,
+            description: &quot;睡前宵夜，用别人的故事下酒&quot;
+        },
+    ...
+    ]
+}
+</code></pre></li>
+<li><p>同样，注意使用 <code>thumbnail</code> 获取图像的地址</p>
+</li>
+</ul>
+<h3 id="14-栏目具体消息查看"><a href="#14-栏目具体消息查看" class="headerlink" title="14. 栏目具体消息查看"></a>14. 栏目具体消息查看</h3><ul>
+<li><strong>请注意！</strong> 此 API 仍可访问，但是其内容未出现在最新的『知乎日报』 App 中。</li>
+<li>URL: <code>/api/3/section/1</code></li>
+<li>URL 最后的数字见『栏目总览』中相应栏目的 <code>id</code> 属性</li>
+<li><p>响应实例：</p>
+<pre><code>{
+    news: [
+        {
+            date: &quot;20140522&quot;,
+            display_date: &quot;5 月 22 日&quot;
+        },
+    ...
+    ],
+    name: &quot;深夜食堂&quot;,
+    timestamp: 1398780001
+}
+</code></pre></li>
+<li><p>往前：<code>/api/3/section/1/before/1398780001</code></p>
+<ul>
+<li>在 URL 最后加上一个时间戳，时间戳详见 JSON 数据末端的 <code>timestamp</code> 属性</li>
+</ul>
+</li>
+</ul>
+<h3 id="15-查看新闻的推荐者"><a href="#15-查看新闻的推荐者" class="headerlink" title="15. 查看新闻的推荐者"></a>15. 查看新闻的推荐者</h3><ul>
+<li>URL: <code>/api/4/story/#{id}/recommenders</code></li>
+<li>将新闻id填入到#{id}的位置， 如 <code>/api/4/story/7101963/recommenders</code></li>
+<li><p>响应实例</p>
+<pre><code>{
+    &quot;items&quot;: [],
+    &quot;editors&quot;: [{
+        &quot;bio&quot;: &quot;树上的女爵&quot;,
+        &quot;title&quot;: &quot;主编&quot;,
+        &quot;id&quot;: 79,
+        &quot;avatar&quot;: &quot;http:\/\/pic1.zhimg.com\/0a6456810_m.jpg&quot;,
+        &quot;name&quot;: &quot;刘柯&quot;
+    }],
+    &quot;item_count&quot;: 1
+}
+</code></pre></li>
+</ul>
+<h3 id="16-获取某个专栏之前的新闻"><a href="#16-获取某个专栏之前的新闻" class="headerlink" title="16. 获取某个专栏之前的新闻"></a>16. 获取某个专栏之前的新闻</h3><ul>
+<li>URL: <code>/api/4/section/#{section id}/before/#{timestamp}</code></li>
+<li>将专栏id填入到 #{section id}, 将时间戳填入到#{timestamp}，如 <code>/api/4/section/34/before/1465772400</code></li>
+<li>注：新闻id要是属于该专栏，否则，返回结果为空</li>
+<li><p>响应实例：</p>
+<pre><code>{
+    &quot;stories&quot;: [
+        {
+            &quot;images&quot;: [
+                &quot;http://pic2.zhimg.com/27f3d8f4c1e0000d04ee446a2f020cf1_t.jpg&quot;
+             ],
+            &quot;type&quot;: 2,
+            &quot;id&quot;: 7119477,
+            &quot;title&quot;: &quot;9 张本周最热节操图，诺一就是人生赢家本人&quot;
+        }, ...
+    ]
+}
+</code></pre></li>
+</ul>
+<h3 id="17-查看-Editor-的主页"><a href="#17-查看-Editor-的主页" class="headerlink" title="17. 查看 Editor 的主页"></a>17. 查看 Editor 的主页</h3><ul>
+<li>iOS: <code>/api/4/editor/#{id}/profile-page/ios</code></li>
+<li>Android: <code>/api/4/editor/#{id}/profile-page/android</code></li>
+<li>如 /api/4/editor/79/profile-page/ios</li>
+</ul>
+
+        </div>
+      </article>
+    </div>
+    <!-- Comments -->
+    <div class="container">
+      
+<section id="comment">
+  <!-- <h1 class="title">留言</h1> -->
+
+  
+</section>
+
+
+    </div>
+    <!-- Pre or Next -->
+    <div class="nav-links">
+      
+        <div class="nav-next">
+          <a href="/2017/05/03/students/" rel="prev">下一页<span class="meta-arraw meta-arraw-right"></span> </a>
+        </div>
+      
+      
+    </div>
+     <!--<div class="nav-links">
+      
+        <div class="nav-previous">
+          <a href="/2017/05/03/students/" rel="prev"><span class="meta-arraw meta-arraw-left"></span> 上一页</a>
+        </div>
+      
+      
+    </div>-->
+
+  </div>
+</div>
+
+
+  <!-- Footer -->
+  <!-- Footer-widgets -->
+<div class="footer-widgets">
+  <div class="row inside-wrapper">
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">关于我们</h1>
+        <div class="custom-widget-content">
+          
+          上海海洋大学开发者联盟
+        </div>
+      </aside>
+    </div>
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">与我联系</h1>
+        <div class="widget-text">
+          
+            
+              <a href="https://github.com/shouDeveloper" class="icon icon-github" target="_blank">github</a>
+            
+          
+        </div>
+      </aside>
+    </div>
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">站内搜索</h1>
+        <div class="widget-text">
+          <form onSubmit="return appDaily.submitSearch('')">
+            <p>
+              <input type="text" placeholder="search..." id="homeSearchInput">
+            </p>
+            <!-- <input type="submit" value="GO"> -->
+          </form>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<footer class="site-info">
+  <p>
+    <span>SHOU-DEVELOPER &copy; 2017</span>
+    
+      <span class="split">|</span>
+      <span>Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> with Theme <a href="https://github.com/GallenHu/hexo-theme-Daily" target="_blank">Daily</a> diy by <a href="https://github.com/garychangcn">@GaryChangCN</a></span>
+    
+  </p>
+</footer>
+<script src="/js/custome.js"></script>
+
+
+  <!-- After footer scripts -->
+  <!-- scripts -->
+<script src="/js/app.js"></script>
+
+
+
+
+
+</body>
+
+</html>
