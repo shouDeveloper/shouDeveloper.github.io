@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<!-- Head tag -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!--Description-->
+  
+  <meta name="description" content="上海海洋大学开发者联盟">
+  
+
+  <!--Author-->
+  
+  <meta name="author" content="shou-devloper">
+  
+
+  <!--Open Graph Title-->
+  
+      <meta property="og:title" content="使用hexo+github pages 搭建个人博客"/>
+  
+  <!--Open Graph Description-->
+  
+      <meta property="og:description" content="上海海洋大学开发者联盟" />
+  
+  <!--Open Graph Site Name-->
+  <meta property="og:site_name" content="SHOU-DEVELOPER"/>
+  <!--Type page-->
+  
+      <meta property="og:type" content="article" />
+  
+  <!--Page Cover-->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- Title -->
+  
+  <title>使用hexo+github pages 搭建个人博客 - SHOU-DEVELOPER</title>
+
+
+  <link rel="shortcut icon" href="http://oj7lzlt0w.bkt.clouddn.com/shouDevfavicon.ico">
+
+  <!-- Custom CSS/Sass -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!----------------------------
+  https://github.com/GallenHu/hexo-theme-Daily
+
+ _____            _   _
+|  __ \          (_) | |
+| |  | |   __ _   _  | |  _   _
+| |  | |  / _` | | | | | | | | |
+| |__| | | (_| | | | | | | |_| |
+|_____/   \__,_| |_| |_|  \__, |
+                          __/ |
+                         |___/
+
+    --------------------------->
+
+</head>
+
+
+<body>
+
+  <!-- Nav -->
+  <div class="cover-click"></div>
+<header class="site-header">
+  <div class="header-inside">
+    <div class="logo">
+      <a href="/" rel="home">
+        
+        <img src="http://oj7lzlt0w.bkt.clouddn.com/shouDevlogo2.svg" alt="SHOU-DEVELOPER" height="60">
+        
+      </a>
+    </div>
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse">
+        <ul class="navbar-nav">
+          
+          
+            <li>
+              <a href="/.">
+                
+                  首页
+                
+              </a>
+            </li>
+          
+            <li>
+              <a href="/archives">
+                
+                  所有文章
+                
+              </a>
+            </li>
+          
+            <li>
+              <a href="/about/">
+                
+                  关于
+                
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </nav>
+    <div class="button-wrap">
+      <button class="menu-toggle">Primary Menu</button>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main Content -->
+  <div class="content-area">
+  <div class="post">
+    <!-- Post Content -->
+    <div class="container">
+      <article>
+        <!-- Title date & tags -->
+        <div class="post-header">
+          <h1 class="entry-title">
+            使用hexo+github pages 搭建个人博客
+            
+          </h1>
+          <p class="posted-on">
+          2017-05-26
+          </p>
+          <div class="tags-links">
+            
+              
+                <a href="/tags/教程/" rel="tag">
+                  教程
+                </a>
+              
+            
+          </div>
+        </div>
+        <!-- Post Main Content -->
+        <div class="entry-content">
+          <h2 id="需要环境"><a href="#需要环境" class="headerlink" title="需要环境"></a>需要环境</h2><p>hexo是一个静态博客生成器，包括当前这个博客，很多博客也是由此构建，类似的构建工具<br>还有<code>jekyll</code>这里只做<code>hexo</code>教程。<br>由于hexo是基于node.js构建的，所以需要nodejs的运行环境。</p>
+<a id="more"></a>
+<h2 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h2><h3 id="mac-安装"><a href="#mac-安装" class="headerlink" title="mac 安装"></a>mac 安装</h3><ul>
+<li>使用brew</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install nodejs</div></pre></td></tr></table></figure>
+<ul>
+<li>官网下载</li>
+</ul>
+<p><a href="https://nodejs.org/zh-cn/" target="_blank" rel="external">nodejs官网</a></p>
+<h3 id="windows-安装"><a href="#windows-安装" class="headerlink" title="windows 安装"></a>windows 安装</h3><ul>
+<li>官网下载安装包</li>
+</ul>
+<p><a href="https://nodejs.org/zh-cn/" target="_blank" rel="external">nodejs官网</a></p>
+<p>安装完成后使用命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">node -v</div><div class="line">npm -v</div></pre></td></tr></table></figure>
+<p><img src="/assets/hexoblog/nodenpm.png" alt="版本号"><br>查看是否有版本号即可指导是否安装ok</p>
+<blockquote>
+<p>npm是nodejs的包管理软件。</p>
+</blockquote>
+<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><p>hexo是用nodejs编写的静态博客生成器。具体使用教程在<a href="https://hexo.io/zh-cn/" target="_blank" rel="external">官网</a><br>下面我只讲解怎么简单使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-cli -g</div></pre></td></tr></table></figure>
+<p>使用命令创建博客目录(myblog)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo init myblog //这一步是初始化myblog</div><div class="line">cd myblog //进入目录</div><div class="line">npm install //安装依赖</div><div class="line">hexo server //启动测试服务。默认监听在4000端口</div></pre></td></tr></table></figure>
+<p>此时访问 localhost:4000 即可查看到博客</p>
+<h2 id="编写文章"><a href="#编写文章" class="headerlink" title="编写文章"></a>编写文章</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new aricleName //这里是文章名</div></pre></td></tr></table></figure>
+<p>之后会在sorece-&gt;_posts目录下看到这个文章的源文件。采用<code>markdown</code>编写。</p>
+<p>hexo更多api以及使用方式请查看<a href="https://hexo.io/zh-cn/api/" target="_blank" rel="external">官方文档</a></p>
+<h2 id="配置github-pages"><a href="#配置github-pages" class="headerlink" title="配置github pages"></a>配置github pages</h2><p>github pages 仓库和普通仓库相同。只有名字不同。<br>例如<br><img src="/assets/hexoblog/githubio.png" alt="githubpages"></p>
+<p>仓库名为 <code>xxxx.github.io</code> 这里xxxx最好是自己的github名字，且不唯一，这里我已经用过了，<br>所以提示重复。</p>
+<p>之后创建仓库即可</p>
+<h2 id="上传到静态文件到github-pages"><a href="#上传到静态文件到github-pages" class="headerlink" title="上传到静态文件到github pages"></a>上传到静态文件到github pages</h2><p>首先需要安装hexo的git deployer插件，不然手动上传很麻烦<br>官方文档<br><a href="https://github.com/hexojs/hexo-deployer-git" target="_blank" rel="external">hexo-deployer-git</a></p>
+<p>按着官方文档安装配置即可。下面我会简要讲述安装配置过程。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure></p>
+<p>打开博客根目录下的 <code>_config.yml</code> 配置文件，填写</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="attr">deploy:</span></div><div class="line"><span class="attr">  type:</span> <span class="string">git</span></div><div class="line"><span class="attr">  repo:</span> <span class="string">git@github.com:shouDeveloper/shouDeveloper.github.io.git</span></div><div class="line"><span class="attr">  branch:</span> <span class="string">master</span></div></pre></td></tr></table></figure>
+<p>这里repo应该填写刚刚创建的仓库的git地址。这里我用的ssh链接。如果没有配置ssh秘钥可以用https链接<br>branch填写默认的master分支</p>
+<p>保存</p>
+<h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo g //generator简写</div></pre></td></tr></table></figure>
+<h4 id="上传到github-pages"><a href="#上传到github-pages" class="headerlink" title="上传到github pages"></a>上传到github pages</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo d //deploy简写</div><div class="line">//上述步骤简写</div><div class="line"></div><div class="line">hexo g -d</div></pre></td></tr></table></figure>
+<p>更多hexo api 见<a href="https://hexo.io/zh-cn/api/" target="_blank" rel="external">文档</a></p>
+<p>更改博客主题 见<a href="https://hexo.io/themes/" target="_blank" rel="external">主题</a><br>不同主题也有不同的配置。详情见不同主题自己的文档。</p>
+<h2 id="访问"><a href="#访问" class="headerlink" title="访问"></a>访问</h2><p>浏览器输入刚刚仓库名 <code>xxx.github.io</code> 即可。<br>例如上面我的是 <a href="https://garychangcn.github.io" target="_blank" rel="external">garychangcn.github.io</a><br>不过我这里用cname转到自己的域名了。</p>
+
+        </div>
+      </article>
+    </div>
+    <!-- Comments -->
+    <div class="container">
+      
+<section id="comment">
+  <!-- <h1 class="title">留言</h1> -->
+
+  
+</section>
+
+
+    </div>
+    <!-- Pre or Next -->
+    <div class="nav-links">
+      
+        <div class="nav-next">
+          <a href="/2017/05/22/vue-tech/" rel="prev">下一页<span class="meta-arraw meta-arraw-right"></span> </a>
+        </div>
+      
+      
+    </div>
+     <!--<div class="nav-links">
+      
+        <div class="nav-previous">
+          <a href="/2017/05/22/vue-tech/" rel="prev"><span class="meta-arraw meta-arraw-left"></span> 上一页</a>
+        </div>
+      
+      
+    </div>-->
+
+  </div>
+</div>
+
+
+  <!-- Footer -->
+  <!-- Footer-widgets -->
+<div class="footer-widgets">
+  <div class="row inside-wrapper">
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">关于我们</h1>
+        <div class="custom-widget-content">
+          
+          上海海洋大学开发者联盟
+        </div>
+      </aside>
+    </div>
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">与我联系</h1>
+        <div class="widget-text">
+          
+            
+              <a href="https://github.com/shouDeveloper" class="icon icon-github" target="_blank">github</a>
+            
+          
+        </div>
+      </aside>
+    </div>
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">站内搜索</h1>
+        <div class="widget-text">
+          <form onSubmit="return appDaily.submitSearch('')">
+            <p>
+              <input type="text" placeholder="search..." id="homeSearchInput">
+            </p>
+            <!-- <input type="submit" value="GO"> -->
+          </form>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<footer class="site-info">
+  <p>
+    <span>SHOU-DEVELOPER &copy; 2017</span>
+    
+      <span class="split">|</span>
+      <span>Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> with Theme <a href="https://github.com/GallenHu/hexo-theme-Daily" target="_blank">Daily</a> diy by <a href="https://github.com/garychangcn">@GaryChangCN</a></span>
+    
+  </p>
+</footer>
+<script src="/js/custome.js"></script>
+
+
+  <!-- After footer scripts -->
+  <!-- scripts -->
+<script src="/js/app.js"></script>
+
+
+
+<!-- google_analytics start -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-76064421-4', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- google_analytics end -->
+
+
+
+</body>
+
+</html>
